@@ -50,7 +50,7 @@ def compare_stands(stand1, stand2):
 				delta = [round(stand2["location"][0] - stand1["location"][0], rounding), round(stand2["location"][1] - stand1["location"][1], rounding), round(stand2["location"][2] - stand1["location"][2], rounding)]
 				command = f'/asa animate {stand1["name"]} {stand1["location"][0]} {stand1["location"][1]} {stand1["location"][2]} 10 {key} {delta[0]} {delta[1]} {delta[2]} 10'
 			elif(key == "rotation"):
-				delta = -1.00000(stand2["rotation"] - stand1["rotation"])
+				delta = -1.00000 * (stand2["rotation"] - stand1["rotation"])
 				if(delta > 180):
 					delta = delta - 360.00000
 				if(delta < -180):
